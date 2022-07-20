@@ -84,7 +84,7 @@ class DefaultCommand extends Command
                 new InputOption('no-verify', null, InputOption::VALUE_NONE, 'Bypasses the pre-commit and commit-msg hooks'),
                 new InputOption('no-tag', null, InputOption::VALUE_NONE, 'Disable release auto tagging'),
                 new InputOption('annotate-tag', null, InputOption::VALUE_OPTIONAL, 'Make an unsigned, annotated tag object once changelog is generated', false),
-                new InputOption('merged', null, InputOption::VALUE_NONE, 'Only include commits whose tips are reachable from HEAD.'),
+                new InputOption('merged', null, InputOption::VALUE_NONE, 'Only include commits whose tips are reachable from HEAD'),
             ]);
     }
 
@@ -136,7 +136,7 @@ class DefaultCommand extends Command
                 'Please check you configuration and enabled shell_exec to proceed.'
             );
 
-            return 1; //Command::FAILURE;
+            return 1; // Command::FAILURE;
         }
         $this->validRequirement('Commands executions enabled');
         // Check git command
@@ -146,7 +146,7 @@ class DefaultCommand extends Command
                 'Please check how to install it from https://git-scm.com before run this command.'
             );
 
-            return 1; //Command::FAILURE;
+            return 1; // Command::FAILURE;
         }
         $this->validRequirement('Git detected correctly');
         // Check git version
@@ -159,14 +159,14 @@ class DefaultCommand extends Command
                 'Please check how to update it from https://git-scm.com before run this command.'
             );
 
-            return 1; //Command::FAILURE;
+            return 1; // Command::FAILURE;
         }
         $this->validRequirement('Git version detected: ' . $gitVersionCode);
         // Check working directory
         if (!Repository::isInsideWorkTree()) {
             $this->output->error('The directory "' . $root . '" isn\'t a valid git repository or isn\'t been detected correctly.');
 
-            return 1; //Command::FAILURE;
+            return 1; // Command::FAILURE;
         }
         $this->validRequirement('Valid git worktree directory: ' . $root);
         // Check git repository

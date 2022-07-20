@@ -4,6 +4,48 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.15.1](https://github.com/marcocesarato/php-conventional-changelog/compare/v1.15.0...v1.15.1) (2022-06-03)
+
+### Bug Fixes
+
+* Add blank line after changeLogVersionHeading [#39](https://github.com/marcocesarato/php-conventional-changelog/issues/39) ([9e4108](https://github.com/marcocesarato/php-conventional-changelog/commit/9e41083adb9d898c97c3e5d3d8561e9b84cae410))
+
+
+---
+
+## [1.15.0](https://github.com/marcocesarato/php-conventional-changelog/compare/v1.14.1...v1.15.0) (2022-06-02)
+### Features
+
+* Add a getCurrentBranch method to Repository ([8b6266](https://github.com/marcocesarato/php-conventional-changelog/commit/8b62668eea440b64683f0af20a13065a7890be3f))
+
+
+---
+
+## [1.14.1](https://github.com/marcocesarato/php-conventional-changelog/compare/v1.14.0...v1.14.1) (2022-05-24)
+### Bug Fixes
+
+* Breaking changes check [#37](https://github.com/marcocesarato/php-conventional-changelog/issues/37) ([476ff7](https://github.com/marcocesarato/php-conventional-changelog/commit/476ff7f8b2e6d3efffbfa4af152f4d0269491934))
+
+
+---
+
+## [1.14.0](https://github.com/marcocesarato/php-conventional-changelog/compare/v1.13.0...v1.14.0) (2022-05-06)
+### ⚠ BREAKING CHANGES
+
+* Sort git tags by version instead of creation date, match prefix when listing tags ([042af9](https://github.com/marcocesarato/php-conventional-changelog/commit/042af9ec98d85519a9e91130e2fcbdd15b981565))
+
+### Features
+
+* Annotated tags ([e738b2](https://github.com/marcocesarato/php-conventional-changelog/commit/e738b29b22cbdaa1cd1490408cff3b1b4299a2f2))
+
+### Bug Fixes
+
+* Get last version with prefix ([2460c8](https://github.com/marcocesarato/php-conventional-changelog/commit/2460c81fab175e23260e449e4a4554a2e8d479c6))
+* Issues with tag version fetch ([d64f35](https://github.com/marcocesarato/php-conventional-changelog/commit/d64f359450bc0b678c90eeb7aa926e2b39bff4b2))
+
+
+---
+
 ## [1.13.0](https://github.com/marcocesarato/php-conventional-changelog/compare/v1.12.3...v1.13.0) (2021-12-08)
 ### Features
 

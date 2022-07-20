@@ -54,11 +54,11 @@ class Repository
     /**
      * Get last tag.
      */
-    public static function getLastTag($merged = false, $prefix = ''): string
+    public static function getLastTag($prefix = '', $merged = false): string
     {
-        $merged = ($merged) ? '--merged' : '';
+        $merged = $merged ? '--merged' : '';
 
-        return self::run("git for-each-ref 'refs/tags/" . $prefix . "*' --sort=-v:refname --format='%(refname:strip=2)' --count=1 {$merged}");
+        return self::run('git for-each-ref ' /* 'refs/tags/" . $prefix . "*' */ . " --sort=-v:refname --format='%(refname:strip=2)' --count=1 {$merged}");
     }
 
     /**
@@ -69,6 +69,14 @@ class Repository
         $lastTag = self::getLastTag($prefix);
 
         return self::run("git rev-parse --verify {$lastTag}");
+    }
+
+    /**
+     * Get current branch name.
+     */
+    public static function getCurrentBranch(): string
+    {
+        return self::run('git branch --show-current');
     }
 
     /**

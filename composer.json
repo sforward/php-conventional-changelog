@@ -1,7 +1,7 @@
 {
     "name": "marcocesarato/php-conventional-changelog",
     "description": "Generate changelogs and release notes from a project's commit messages and metadata and automate versioning with semver.org and conventionalcommits.org",
-    "version": "1.13.0",
+    "version": "1.15.1",
     "type": "library",
     "license": "GPL-3.0-or-later",
     "minimum-stability": "stable",
@@ -50,7 +50,7 @@
         "post-update-cmd": "cghooks update"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.18",
+        "friendsofphp/php-cs-fixer": "^3.8",
         "brainmaestro/composer-git-hooks": "^2.8"
     },
     "require": {
